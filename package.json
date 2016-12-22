@@ -1,0 +1,27 @@
+{
+  "name": "copperplatepdf",
+  "version": "1.0.0",
+  "description": "copperplate guide sheet pdf",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessinca/pointedpen-guide-sheet.git"
+  },
+  "keywords": [
+    "pointed",
+    "pen",
+    "calligraphy",
+    "copperplate",
+    "spencerian",
+    "guidesheet"
+  ],
+  "author": "Jessinca Jong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jessinca/pointedpen-guide-sheet/issues"
+  },
+  "homepage": "https://github.com/jessinca/pointedpen-guide-sheet#readme"
+}
