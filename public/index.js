@@ -55,14 +55,8 @@ const drawGuideLineSet = (options) => {
 		y: halfAscenderY
 	});
 	
-	// draw x line (top)
-	setDrawColor(xColor);
 	const xLineTopY = startY + ascenderDescenderHeight;
-	doc.line(horizontalLineStartX, xLineTopY, horizontalLineEndX, xLineTopY);
-	
-	// draw x line (bottom)
 	const xLineBottomY = xLineTopY + xHeight;
-	doc.line(horizontalLineStartX, xLineBottomY, horizontalLineEndX, xLineBottomY);
 	
 	// half descender line
 	const halfDescenderY = xLineBottomY + (ascenderDescenderHeight/2);
@@ -91,6 +85,10 @@ const drawGuideLineSet = (options) => {
 		slantStartX += slantDistance;
 	}
 	
+	// draw x lines (this should be the last lines to draw to prevent them from being cut off by other lines)
+	setDrawColor(xColor);
+	doc.line(horizontalLineStartX, xLineTopY, horizontalLineEndX, xLineTopY);
+	doc.line(horizontalLineStartX, xLineBottomY, horizontalLineEndX, xLineBottomY);
 };
 
 const drawGuideSheet = (options) => {
@@ -137,15 +135,15 @@ drawGuideSheet({
 	pageWidth: a4HorizontalWidthMm,
 	pageHeight: a4HorizontalHeightMm,
 	pageMargin: 15,
-	halfAscenderDescenderColor: [200, 200, 200],
-	ascenderDescenderColor: [180, 180, 180],
+	halfAscenderDescenderColor: [150, 150, 150],
+	ascenderDescenderColor: [150, 150, 150],
 	ascenderDescenderHeight: 7.5,
-	lineDistance: 10,
-	slantColor: [180,180,180],
+	lineDistance: 7.5,
+	slantColor: [150,150,150],
 	slantDistance: 7.5,
 	slantDeg: 55,
 	xHeight: 5,
-	xColor: [50,50,50]
+	xColor: [90,90,90]
 });
 
 doc.save('a4.pdf');
