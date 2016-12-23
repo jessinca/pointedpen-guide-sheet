@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/jessinca/pointedpen-guide-sheet/issues"
   },
-  "homepage": "https://github.com/jessinca/pointedpen-guide-sheet#readme"
+  "homepage": "https://github.com/jessinca/pointedpen-guide-sheet#readme",
+  "devDependencies": {
+    "jspdf": "^1.3.2"
+  }
 }
