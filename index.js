@@ -106,7 +106,7 @@ const drawGuideSheet = (options) => {
 		xHeight,
 		xColor
 	} = options;
-	let y = pageMargin;
+	let y = pageMargin + 15;
 	const pageMarginx = pageMargin;
 	
 	const maxHorizontalLineY = pageHeight-pageMargin;
