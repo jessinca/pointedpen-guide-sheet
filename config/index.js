@@ -3,10 +3,10 @@ var path = require('path')
 
 module.exports = {
   build: {
-    env: require('./prod.env'),
-    index: path.resolve(__dirname, '../dist/index.html'),
-    assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static',
+    env: require('./prod.env.js'),
+    index: path.resolve(__dirname, '../docs/index.html'),
+    assetsRoot: path.resolve(__dirname, '../docs'),
+    assetsSubDirectory: '',
     assetsPublicPath: '/',
     productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as
@@ -17,7 +17,8 @@ module.exports = {
     productionGzipExtensions: ['js', 'css']
   },
   dev: {
-    env: require('./dev.env'),
+    devtool: 'inline-source-map',
+    env: require('./dev.env.js'),
     port: 8080,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',

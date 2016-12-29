@@ -5,7 +5,7 @@
 
 var path = require('path');
 var merge = require('webpack-merge');
-var baseConfig = require('../../build/webpack.base.conf');
+var baseConfig = require('../../build/webpack.base.conf.js');
 var utils = require('../../build/utils');
 var webpack = require('webpack');
 var projectRoot = path.resolve(__dirname, '../../');
@@ -23,7 +23,7 @@ var webpackConfig = merge(baseConfig, {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': require('../../config/test.env')
+      'process.env': require('../../config/test.env.js')
     })
   ]
 });
@@ -56,7 +56,7 @@ module.exports = function (config) {
     browsers: ['PhantomJS'],
     frameworks: ['mocha', 'sinon-chai'],
     reporters: ['spec', 'coverage'],
-    files: ['./index.js'],
+    files: ['index.js'],
     preprocessors: {
       './index.js': ['webpack', 'sourcemap']
     },
